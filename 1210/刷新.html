@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		*{margin: 0;padding: 0;list-style-type: none;}
+		#box{
+			width: 1200px;
+			margin: 30px auto;
+		}
+		#box ul{
+			float: left;
+			width: 24%;
+			margin: 0 .5%;
+		}
+		#box li{
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div id="box" v-lee>
+		<ul></ul>
+		<ul></ul>
+		<ul></ul>
+		<ul></ul>
+	</div>
+</body>
+<script src="vue.js" ></script>
+<script src="vue-resource.js" ></script>
+<script>
+	Vue.directive('lee',{
+		inserted(dom, data) {
+			var aUl = document.querySelectorAll('ul');
+			var arr = [];
+			for(var i=0;i<aUl.length;i++){
+				arr[i] = aUl[i];
+			}
+			var min = 0;
+			function creat(){
+				for(var i=0;i<20;i++){
+					var oLi = document.createElement('li');
+					oLi.style.height = parseInt(Math.random() * 200 + 100) + 'px';
+					oLi.style.backgroundColor = 'rgb('+parseInt(Math.random()*256)+','+parseInt(Math.random()*256)+','+parseInt(Math.random()*256)+')';
+					arr[0].appendChild(oLi);
+					arr.sort(function(a,b){
+					return a.offsetHeight - b.offsetHeight;
+				})
+					min = arr[0].offsetHeight;
+				}
+			}
+			creat();
+			var ch = document.documentElement.clientHeight;
+			min = min + arr[0].offsetTop;
+			window.onscroll = function(){
+				var st = document.documentElement.scrollTop || document.body.scrollTop;
+				if(ch+st>min){
+					setTimeout(creat, 1000)
+				}
+			}
+		}
+	})
+	new Vue({
+		el:'#box'
+	})
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<diV id="box">
+		<div style="width:200px;height:200px;position:absolute;background:red;" v-lee></div>
+	</diV>
+</body>
+<script src="vue.js"></script>
+<script>
+	Vue.directive('lee', (a) => {
+		a.onmousedown = function(event) {
+			var left = a.offsetLeft 
+			var top = a.offsetTop
+			var xl = event.clientX - left
+			var yt = event.clientY - top
+			document.onmousemove = function(event) {
+				var x = event.clientX - xl
+				var y = event.clientY - yt
+				a.style.top = y + 'px'
+				a.style.left = x + 'px'
+			}
+			window.onmouseup = function() {
+				document.onmousemove = ''
+			}
+		}
+	})
+	new Vue({
+		el: "#box",
+	})
+</script>
+</html>
