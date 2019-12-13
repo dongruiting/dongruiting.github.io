@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	 crossorigin="anonymous">
+	<script src="https://www.jq22.com/jquery/jquery-3.3.1.js"></script>
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+	 crossorigin="anonymous"></script>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		[v-cloak] {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="box" v-cloak>
+		<a-no>
+			<h3 slot="header">产品介绍</h3>
+			<span slot="icon"></span>
+			<p slot="comtent" style="width: 300px;margin: 0 auto;line-height: 24px;">亲，本版本是最简单的单页式模板，不需要创建内页
+				一般来说，只要半天就可以完成对这个模板的设定哦
+				如果您在使用中有什么问题，可以在教程中找到对应的帮助信息哦</p>
+			<img style="padding: 50px 0;" slot="img" src="https://ccdn.goodq.top/caches/4a7b7daf436f3e5cb2e29433375ccd5d/aHR0cHM6Ly81NTlhNDQ3YzczMmVlLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTQvMDYvYjU5YzY3YmYxOTZhNDc1ODE5MWU0MmY3NjY3MGNlYmEuanBn.jpg"
+			 alt="">
+		</a-no>
+		<a-no>
+			<h3 slot="header">模板功能</h3>
+			<span slot="icon"></span>
+			<p slot="comtent" style="width: 300px;margin: 0 auto;line-height: 24px;">亲，本版本是最简单的单页式模板，不需要创建内页
+				一般来说，只要半天就可以完成对这个模板的设定哦
+				如果您在使用中有什么问题，可以在教程中找到对应的帮助信息哦</p>
+			<img style="padding: 50px 0;" slot="img" src="https://ccdn.goodq.top/caches/4a7b7daf436f3e5cb2e29433375ccd5d/aHR0cHM6Ly81NTlhNDQ3YzczMmVlLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTQvMDYvYjU5YzY3YmYxOTZhNDc1ODE5MWU0MmY3NjY3MGNlYmEuanBn.jpg"
+			 alt="">
+		</a-no>
+	</div>
+	<template id="no">
+		<div>
+			<div style="text-align: center;">
+				<div>
+					<slot name="header"></slot>
+				</div>
+				<div style="padding: 20px 0; position: relative;">
+					<span style="width: 100px;height: 1px;background: #ccc;display: inline-block;margin-right: 20px;"></span>
+					<span name="icon" class="glyphicon glyphicon-tag" style="font-size: 30px; color: #ff5100;position: absolute;top: 12px;"></span>
+					<span style="width: 100px;height: 1px;background: #ccc;display: inline-block;margin-left: 60px;"></span>
+				</div>
+				<div>
+					<slot name="comtent"></slot>
+				</div>
+				<div>
+					<slot name="img"></slot>
+				</div>
+			</div>
+		</div>
+	</template>
+</body>
+</html>
+<script src="vue.js"></script>
+<script>
+	Vue.component('aNo', {
+		template: '#no'
+	})
+	new Vue({
+		el: '#box'
+	})
+</script>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	 crossorigin="anonymous">
+	<script src="https://www.jq22.com/jquery/jquery-3.3.1.js"></script>
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+	 crossorigin="anonymous"></script>
+	<title></title>
+</head>
+<body>
+	<div id="box">
+		<no1 style="float: left;" v-for="i in arr" :aaa="i"></no1>
+	</div>
+	<template id="no1">
+		<div style="text-align: center;padding:  20px 10px;">
+			<div :class="json.a" style="font-size: 30px;"></div>
+			<div  style="margin: 20px 0;">{{json.b}}</div>
+			<div>{{json.c}}</div>
+		</div>
+	</template>
+</body>
+	<script src="vue.js"></script>
+	<script type="text/javascript">
+		Vue.component('no1',{
+			template:'#no1',
+			props:['aaa'],
+			data(){
+				return{
+					json:this.aaa
+				}
+			}
+		})
+		new Vue({
+			el:'#box',
+			data:{
+				arr:[
+					{a:'glyphicon glyphicon-headphones',b:'一页式模板',c:'起飞页不仅是一个方便快捷的构建网站'},
+					{a:'glyphicon glyphicon-tint',b:'全屏呈现',c:'满屏效果，信息更少，空白更多'},
+					{a:'glyphicon glyphicon-magnet',b:'响应式设计',c:'起飞页不仅是一个方便快捷的构建网站'},
+					{a:'glyphicon glyphicon-thumbs-up',b:'免费试用',c:'起飞页不仅是一个方便快捷的构建网站'},
+					{a:'glyphicon glyphicon-phone',b:'支持WIN10',c:'起飞页不仅是一个方便快捷的构建网站'},
+					{a:'glyphicon glyphicon-level-up',b:'一键部署',c:'起飞页不仅是一个方便快捷的构建网站'}
+				]
+			}
+		})
+	</script>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        .one {
+            overflow: hidden;
+            transition: all 0.3s;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <lee style="width: 400px;margin: 30px auto;float: left" :haha="arr"></lee>
+        <lee style="width: 400px;margin: 30px auto; float: left" :haha="arr2"></lee>
+    </div>
+    <template id="lee">
+        <div>
+            <div id="box" style="width: 400px;min-height: 500px;border: 1px solid;margin: 0 auto;">
+                <div v-for="(i,$index) in arr">
+                    <div style="line-height: 50px;background: hotpink;" @click="index=$index">
+                                {{i.title}}
+                    </div>
+                    <div :style="{'height':$index==index?'200px':'0px'}" class="one">{{i.text}}</div>
+                </div>
+            </div>
+        </div>
+    </template>
+</body>
+<script src="vue.js"></script>
+<script type="text/javascript">
+    Vue.component('lee', {
+        template: '#lee',
+        props: ['haha'],
+        data() {
+            return {
+                index: 0,
+                arr: this.haha
+            }
+        }
+    })
+    new Vue({
+        el: '#box',
+        data: {
+            arr: [{
+                title: '标题一',
+                text: '内容一'
+            }, {
+                title: '标题二',
+                text: '内容二'
+            }, {
+                title: '标题三',
+                text: '内容三'
+            }],
+            arr2: [{
+                title: '标一',
+                text: '内容一'
+            }, {
+                title: '标二',
+                text: '内容二'
+            }, {
+                title: '标三',
+                text: '内容三'
+            }]
+        }
+    })
+</script>
+</html>
