@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        [v-cloak] {
+            display: none;
+        }
+        .container {
+            width: 100%;
+            height: auto;
+        }
+        .banner {
+            width: 100%;
+            height: 610px;
+            position: relative;
+            background: url('https://ccdn.goodq.top/caches/9f366b62bb5631cd6f4d4d8404811ae1/aHR0cDovLzViOWE1ODM1NTI2MWMudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxOC8wOS9lYjA5MjVjMWIwOTQ4NTM0NTdkNTg0M2NiNDEwNGYxOS5qcGc_p_p100_p_3D.jpg') no-repeat;
+            background-size: cover;
+            background-attachment: scroll;
+            background-position: Array;
+        }
+        .banner .img1 {
+            position: absolute;
+            top: 30px;
+            right: 120px;
+        }
+        .banner .img2 {
+            width: 70px;
+            height: 70px;
+            position: fixed;
+            top: 20px;
+            right: 100px;
+        }
+        .welcome {
+            width: 100%;
+            height: 400px;
+            background-color: #004034;
+            position: relative;
+            padding-top: 250px;
+        }
+        .welcome .img1 {
+            width: 70px;
+            height: 70px;
+            z-index: 999;
+            position: absolute;
+            top: 130px;
+            left: 50%;
+            margin-left: -35px;
+        }
+        .ti {
+            width: 100%;
+            height: 245px;
+            border-bottom: 1px dashed #ccc;
+            padding-top: 110px;
+            text-align: center;
+        }
+        .left {
+            width: 60%;
+            float: left;
+        }
+        .right {
+            width: 40%;
+            float: left;
+        }
+        .weihu {
+            width: 100%;
+            height: 400px;
+            border-bottom: 1px dashed #ccc;
+            padding-top: 80px;
+        }
+        .jing {
+            width: 100%;
+            height: 800px;
+            text-align: center;
+            padding-top: 60px;
+            background: #004034;
+        }
+        .chang {
+            color: #fff;
+        }
+        .jing_1 {
+            width: 80%;
+            height: 554px;
+            margin: 30px auto;
+        }        
+        .left1 {
+            width: 60%;
+            height: 554px;
+            float: left;
+        }
+        .right1 {
+            width: 40%;
+            height: 554px;
+            background: #ccc;
+            float: right;
+        }
+        .mu {
+            width: 100%;
+            height: 1000px;
+            background: #ccc;
+            text-align: center;
+        }
+        .dong {
+            width: 100%;
+            height: 800px;
+            background: #f5f5f5;
+            text-align: center;
+        }
+        .hezi {
+            width: 80%;
+            height: 800px;
+            background: rgba(8, 64, 53, 0.7);
+            margin: 30px auto;
+            background: url('https://ccdn.goodq.top/caches/9f366b62bb5631cd6f4d4d8404811ae1/aHR0cDovLzViOWE1ODM1NTI2MWMudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxOC8wOS9lYjA5MjVjMWIwOTQ4NTM0NTdkNTg0M2NiNDEwNGYxOS5qcGc_p_p100_p_3D.jpg') no-repeat;
+            background-size: cover;
+        }
+        .hezi_1 {
+            width: 100%;
+            height: 150px;
+            background: rgba(8, 64, 53, 0.7);
+        }
+        .hezi_1:hover {
+            background: rgb(0, 0, 0, .5);
+            transition: all 0.3s ease-out 0s;
+        }
+        .hezi_left {
+            width: 40%;
+            height: 150px;
+            float: left;
+        }
+        .hezi_left p {
+            color: #ffffff;
+            font-size: 36px;
+            font-family: arial;
+            margin-left: 40px;
+            line-height: 150px;
+        }
+        .hezi_left span {
+            color: #ffffff;
+            font-size: 14px;
+            font-family: arial;
+        }
+        .hezi_right {
+            width: 60%;
+            height: 150px;
+            float: right;
+        }
+        .hezi_right p {
+            color: #ffffff;
+            font-size: 18px;
+            font-family: 微软雅黑;
+            margin-top: 30px;
+        }
+        .hezi_right p:nth-of-type(2) {
+            color: #f4f4f4;
+            font-size: 12px;
+            font-family: 微软雅黑;
+            line-height: 22px;
+        }
+        .footer {
+            width: 100%;
+            height: 600px;
+            background: #084035;
+        }
+        .footer p {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 18px;
+            color: #ffffff;
+        }
+        .footer dl {
+            width: 20%;
+            height: 150px;
+            margin-left: 140px;
+            margin-top: 120px;
+            text-align: center;
+        }
+        .footer dl dt {
+            font-size: 26px;
+            color: rgb(255, 255, 255)
+        }
+        .footer dl dd img {
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .footer_1 {
+            width: 80%;
+            height: 200px;
+            margin: 100px auto;
+        }
+        .footer_1 p {
+            font-size: 12px;
+            color: rgb(255, 255, 255);
+            padding-top: 50px;
+        }
+        .no1_1 {
+            font-size: 16px;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" v-cloak>
+        <banner1>
+            <p style="font-size:16px;font-weight:normal;font-style:normal;color:#000;margin-top:20px;text-align: center;" slot="nos1">更多</p>
+            <p slot='nos3' style="text-align: center;margin-top: 20px;"><img src="https://ccdn.goodq.top/caches/9f366b62bb5631cd6f4d4d8404811ae1/aHR0cHM6Ly81YjlhNTgzNTUyNjFjLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTgvMDkvMTA1NzhjYWU0ZWI4ZjYzNDczODZjZTY3NmVjYmU2ZTUtMTV4NDAucG5n.png" alt="" style="color: #000;"></p>
+            <div style="width:100px;height:50px;line-height:50px;border-top: 1px solid black;font-size: 20px;display: inline-block;" slot="nos2">
+                <p style="text-align: center;">服务场地</p>
+            </div>
+            <div style="font-size:18px;font-weight:normal;font-style:normal;color:#ffffff;margin-top: 20px;" slot="nos4">
+                <p style="text-align: center;">外伶仃岛</p>
+            </div>
+        </banner1>
+    </div>
+    <template id="banner1">
+        <div>
+            <div class="container">
+              <!-- 头部 -->
+                <div class="banner">
+                    <img src="https://ccdn.goodq.top/caches/9f366b62bb5631cd6f4d4d8404811ae1/aHR0cDovLzViOWE1ODM1NTI2MWMudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxOC8wOS9kYTlkZTQ2YzcxNjMyMzBmZmQ3ZGZiYzAyNjNhMTFkZi5wbmc_p_p100_p_3D.png"
+                        alt="" class="img1">
+                    <img src="https://ccdn.goodq.top/caches/9f366b62bb5631cd6f4d4d8404811ae1/aHR0cDovLzViOWE1ODM1NTI2MWMudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxOC8wOS9hZDkxZjIyZGJiZmE2NDk5MGQ2OTQ1N2VkYTExZjBiYi5wbmc_p_p100_p_3D.png"
+                        alt="" class="img2">
+                </div>
+                <!-- 欢迎 -->
+                <div class="welcome">
+                    <div>
+                        <img src="https://ccdn.goodq.top/caches/9f366b62bb5631cd6f4d4d8404811ae1/aHR0cDovLzViOWE1ODM1NTI2MWMudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxOC8wOS9mYTZhNDE5ZGI2MDZiZGMxYTRjMzlmY2Y5ZGQxYTFlOS02MHg2MC5wbmc_p_p100_p_3D.png"
+                            alt="" class="img1">
+                    </div>
+                    <div style="width: 695px;margin: 0 auto;">
+                        <h3 style="color: rgb(255, 255, 255); font-size: 40px;text-align: center;margin-bottom: 50px;">
+                            欢迎来到木与石</h3>
+                        <p style="color: rgb(255, 255, 255); font-size: 15px;line-height: 30px; text-align: center;">
+                            当今最领先的响应式自助建站平台，我们的流线式网页布局设计方案和可视化图文内容编辑模式让网站制作和维护成为一件轻松惬意的事。无论您是普通互联网用户，
+                            还是专业网站制作人员，都能使用起飞页设计出最具专业水准的网站。想创建一个简单的单页式站点，还是一个专业的公司网站，亦或是一个别具一格的博客？起飞页可以满足您的所有需求。我们是响应式网站的倡导者，所有前端页面代码均采用HMLT5和CSS3实现。
+                        </p>
+                        <slot name="nos1"></slot>
+                        <slot name='nos3'></slot>
+                    </div>
+                </div>
+                <!-- 服务 -->
+                <div class="ti">
+                    <slot name="nos2"></slot>
+                    <div>
+                        <h3 style="color: rgb(0, 0, 0); font-size: 40px;text-align: center;margin-top: 50px;">
+                            我们有一系列的服务，为您打造极致的户外体验</h3>
+                    </div>
+                </div>
+                <!-- 维护 -->
+                <div class="weihu">                    
+                    <div class="left">
+                        <div style="width:450px;margin: 0 auto;">
+                            <h3 style="font-size:30px;font-weight:normal;font-style:normal;color:#000;font-weight: bold;margin-bottom: 30px;">户外旅游</h3>
+                            <p style="font-size: 14px; font-family: 微软雅黑; color: rgb(68, 68, 68);line-height: 25px;">
+                                我们的流线式网页布局设计方案和可视化图文内容编辑模式让网站制作和维护成为一件轻松惬意的事。起飞页的核心竞争力来自于它集流线式布局方案与可视化内容编辑于一体，支持打字传图、自由拖拽，不需要专业编写代码，您可以随心所欲创建区块、添加组件…
+                            </p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <img src="https://ccdn.goodq.top/caches/9f366b62bb5631cd6f4d4d8404811ae1/aHR0cDovLzViOWE1ODM1NTI2MWMudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxOC8wOS9jMTY3ZDM3MTRiMmZkOWQwNmUyN2MwMmI1ZWZjZjRmMi0zMDB4MzAwLnBuZw_p_p100_p_3D_p_p100_p_3D.png"
+                            alt="" style="width: 300px;height: 300px;">
+                    </div>
+                    <slot name="nos1"></slot>
+                    <slot name="nos3"></slot>
+                    </div>   
+                    <div class="weihu">                    
+                        <div class="left">
+                            <div style="width:450px;margin: 0 auto;">
+                                <h3 style="font-size:30px;font-weight:normal;font-style:normal;color:#000;font-weight: bold;margin-bottom: 30px;">婚礼庆典</h3>
+                                <p style="font-size: 14px; font-family: 微软雅黑; color: rgb(68, 68, 68);line-height: 25px;">
+                                    我们的流线式网页布局设计方案和可视化图文内容编辑模式让网站制作和维护成为一件轻松惬意的事。起飞页的核心竞争力来自于它集流线式布局方案与可视化内容编辑于一体，支持打字传图、自由拖拽，不需要专业编写代码，您可以随心所欲创建区块、添加组件…
+                                </p>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <img src="https://ccdn.goodq.top/caches/9f366b62bb5631cd6f4d4d8404811ae1/aHR0cHM6Ly81YjlhNTgzNTUyNjFjLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTgvMDkvNGE3MDJiYmY3ODJkMDAwNzNiYzk5MDZlNGRhMDRjMTQtMzAweDMwMC5wbmc_p_p100_p_3D.png"
+                                alt="" style="width: 300px;height: 300px;">
+                        </div>
+                        <div class="no1_1">
+                            <slot name="nos1"></slot>
+                            <slot name="nos3"></slot>
+                        </div>
+                        </div>    
+                        <div class="weihu">                    
+                            <div class="left">
+                                <div style="width:450px;margin: 0 auto;">
+                                    <h3 style="font-size:30px;font-weight:normal;font-style:normal;color:#000;font-weight: bold;margin-bottom: 30px;">活动展览</h3>
+                                    <p style="font-size: 14px; font-family: 微软雅黑; color: rgb(68, 68, 68);line-height: 25px;">
+                                        我们的流线式网页布局设计方案和可视化图文内容编辑模式让网站制作和维护成为一件轻松惬意的事。起飞页的核心竞争力来自于它集流线式布局方案与可视化内容编辑于一体，支持打字传图、自由拖拽，不需要专业编写代码，您可以随心所欲创建区块、添加组件…
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <img src="https://ccdn.goodq.top/caches/9f366b62bb5631cd6f4d4d8404811ae1/aHR0cHM6Ly81YjlhNTgzNTUyNjFjLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTgvMDkvNmI4OTlkZjFhMjgzMDM0ODY5NGQ0NmI5MTg2ZDQ5MWMtMzAweDMwMC5wbmc_p_p100_p_3D.png"
+                                    alt="" style="width: 300px;height: 300px;">
+                            </div>
+                            <div>
+                                <slot name="nos1"></slot>
+                                <slot name="nos3"></slot>
+                            </div>
+                        </div>
+                    </div>            
+                    <!-- 景区场地 -->
+                    <div class="jing">
+                        <slot name="nos4" class="chang"></slot>
+                        <div>
+                            <h3 style="color: rgb(255, 255, 255); font-size: 40px;">
+                                    多个景点，可供选择</h3>
+                        </div>
+                        <div class="jing_1">
+                             <div class="left1" >
+                                 <img src="https://ccdn.goodq.top/caches/9f366b62bb5631cd6f4d4d8404811ae1/aHR0cHM6Ly81YjlhNTgzNTUyNjFjLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTgvMDkvZGFjMjkyODc3NThkN2RjNGQ5NGNkZjBiODZlZDY2ZDctMTAyNHg4MzYuanBn.jpg" alt="" style="width:100%;height:554px ;">
+                             </div>
+                             <div class="right1">
+                                <slot name="nos4" class="chang"></slot>
+                                <p style="text-align: center; line-height: 40px; letter-spacing: 1px;margin-top: 80px;">外伶仃岛在美丽的万山群岛中显得不一样。它不大但是奇特，山不高但是险峻，特别是以石奇水清为人称道。外伶仃岛上的伶仃湾、塔湾、大东湾的沙滩，沙质很细软，海水很湛蓝，清澈见底。你可以潜水，游泳或者沙滩上露营，是一个休闲度假的好去处！在月出时刻，还可以欣赏“海上生明月”的美景。</p>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="mu">
+                        <slot name="nos4" class="chang"></slot>
+                        <div>
+                            <h3 style="color: rgb(0, 0, 0); font-size: 40px;margin-top: 30px;">
+                                    木与石的最新动态</h3>
+                        </div>
+                        <div class="hezi">
+                            <div class="hezi_1">
+                                <div class="hezi_left">
+                                    <p>09-11<span>2018</span></p>
+                                </div>
+                                <div class="hezi_right">
+                                    <p>欧式尖顶帐篷出租一天要多少钱？</p>
+                                    <p>当今最领先的响应式自助建站平台，我们的流线式网页布局设计方案和可视化图文内容编辑<br>模式让网站制作和维护...</p>
+                                </div>
+                            </div> 
+                            <!-- 二 -->
+                            <div class="hezi_1">
+                                <div class="hezi_left">
+                                  <p>09-11<span>2018</span></p>
+                                </div>
+                                <div class="hezi_right">
+                                    <p>大型帐篷一般需要多少钱？</p>
+                                    <p>当今最领先的响应式自助建站平台，我们的流线式网页布局设计方案和可视化图文内容编辑<br>模式让网站制作和维护...</p>
+                                </div>
+                            </div> 
+                            <!-- 三 -->
+                            <div class="hezi_1">
+                                <div class="hezi_left">
+                                  <p>09-11<span>2018</span></p>
+                                </div>
+                                <div class="hezi_right">
+                                    <p>温暖与您同行，2018春节祝福</p>
+                                    <p>当今最领先的响应式自助建站平台，我们的流线式网页布局设计方案和可视化图文内容编辑<br>模式让网站制作和维护...</p>
+                                </div>
+                            </div> 
+                            <!-- 四 -->
+                            <div class="hezi_1">
+                                <div class="hezi_left">
+                                  <p>09-11<span>2018</span></p>
+                                </div>
+                                <div class="hezi_right">
+                                    <p>企业的“仪式感”—— 温暖而优雅</p>
+                                    <p>当今最领先的响应式自助建站平台，我们的流线式网页布局设计方案和可视化图文内容编辑<br>模式让网站制作和维护...</p>
+                                </div>
+                            </div> 
+                            <!-- 五 -->
+                            <div class="hezi_1">
+                                <div class="hezi_left">
+                                  <p>09-11<span>2018</span></p>
+                                </div>
+                                <div class="hezi_right">
+                                    <p>昨夜星光璀璨，明晨丽日辉煌|祝贺“匠...</p>
+                                    <p>当今最领先的响应式自助建站平台，我们的流线式网页布局设计方案和可视化图文内容编辑<br>模式让网站制作和维护...</p>
+                                </div>
+                            </div>        
+                        </div>
+                    </div>
+                    <div class="dong">
+                        <slot name="nos4" class="chang"></slot>
+                        <div>
+                            <h3 style="color: rgb(8, 64, 53); font-size: 30px;margin-top: 30px;">
+                                    您的评价，是我们前进的动力</h3>
+                        </div>
+                        <img src="https://ccdn.goodq.top/caches/9f366b62bb5631cd6f4d4d8404811ae1/aHR0cHM6Ly81YjlhNTgzNTUyNjFjLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTgvMDkvNmI4OTlkZjFhMjgzMDM0ODY5NGQ0NmI5MTg2ZDQ5MWMtMzAweDMwMC5wbmc_p_p100_p_3D.png"
+                                        alt="" style="width: 200px;height: 200px;margin-top: 30px;">
+                        <p style="padding: 50px 180px;line-height: 40px;color: rgb(8, 64, 53);font-size: 16px;
+                        font-family: 微软雅黑;">最领先的响应式自助建站平台，我们的流线式网页布局设计方案和可视化图文内容编辑模式让网站<br>制作和维护成为一件轻松惬意的事。无论您是普通互联网用户， 还是专业网站制作人<br>员，都能使用起飞页设计出最具专业水准的网站。</p>
+                        <span style="color: rgb(8, 64, 53); font-size: 16px; font-family: 微软雅黑;margin-top: 40px;">——朱一龙先生</span>
+                        <div></div>
+                    </div>
+                    <div class="footer">
+                        <!-- <slot name="nos4" class="chang"></slot> -->
+                        <p>-----</p>
+                        <p>联系我们</p>
+                        <dl style="float: left;">
+                            <dt>web@123.com</dt>
+                            <dd><img src="https://ccdn.goodq.top/caches/9f366b62bb5631cd6f4d4d8404811ae1/aHR0cHM6Ly81YjlhNTgzNTUyNjFjLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTgvMDkvOTE4MDQ4ODQ0NmQyZTA1ZmEzZWQ3OTY5ZDMyM2VmOTEtNzB4NzAucG5n.png" alt=""></dd>
+                        </dl>
+                        <dl style="float: left;">
+                            <dt>web@123.com</dt>
+                            <dd><img src="https://ccdn.goodq.top/caches/9f366b62bb5631cd6f4d4d8404811ae1/aHR0cHM6Ly81YjlhNTgzNTUyNjFjLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTgvMDkvOTE4MDQ4ODQ0NmQyZTA1ZmEzZWQ3OTY5ZDMyM2VmOTEtNzB4NzAucG5n.png" alt=""></dd>
+                        </dl>
+                        <dl style="float: left;">
+                            <dt>web@123.com</dt>
+                            <dd><img src="https://ccdn.goodq.top/caches/9f366b62bb5631cd6f4d4d8404811ae1/aHR0cHM6Ly81YjlhNTgzNTUyNjFjLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTgvMDkvOTE4MDQ4ODQ0NmQyZTA1ZmEzZWQ3OTY5ZDMyM2VmOTEtNzB4NzAucG5n.png" alt=""></dd>
+                        </dl>
+                        <div class="footer_1">
+                            <slot name="nos1"></slot>
+                            <slot name='nos3'></slot> 
+                            <p>© Copyright 2020 帐篷租赁网站.  免责声明</p>  
+                        </div>      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+</body>
+<script src="vue.js"></script>
+<script>
+    Vue.component('banner1', {
+        template: '#banner1',
+    })
+    new Vue({
+        el: "#box",
+    })
+</script>
+</html>
