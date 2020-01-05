@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="swiper.min.css">
+	<!-- 引入样式 -->
+	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+	<style type="text/css">
+		*{margin: 0;padding: 0;list-style: none;}
+		a{color: #000;text-decoration: none;}
+		a:hover{color: #000;text-decoration: none;}
+		.list a{float: left;width: 129px;height: 29px;margin-left: 10px;text-align: center;line-height: 29px;}
+		.list a{font-size: 14px;color: #3191cc;display: inline-block}
+		.list a:hover{background: #3191cc;color: #fefefe;}
+		.list a.active{background: #3191cc;color: #fefefe;}
+		[v-cloak]{display: none;}
+		.swiper-container{width: 100%;height: 556px;overflow: hidden}
+		.swiper-wrapper{width: 200%;}
+		.swiper-slide{float: left;width: 1263px}
+		.swiper-slide img{width: 100%;height: 556px;}
+		.swiper-pagination{width: 100%;bottom: 10px;}
+		.swiper-pagination-bullet{width: 10px;height: 10px;border-radius: 50%;background: red;margin: 0 4px;display: inline-block}
+		.swiper-pagination-bullet-active{background: red}
+		.ul li{line-height: 35px}
+		.ul li.active{color: #3191cc;}
+		.ul li a{padding: 5px 0 5px 10px}
+		.ul li span{display: inline-block;font-size: 16px;}
+	</style>
+</head>
+<body>
+	<div id="box" v-cloak>
+		<div style="padding: 0 100px">
+			<div style="height: 90px;margin: 0 auto;padding: 0 40px;">
+				<div style="float: left;"><img src="https://ccdn.goodq.top/caches/c0b2c37cae1f3b474c3b0522b670a440/aHR0cHM6Ly81NGQ0YTNiMjEwY2FlLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTcvMDIvNDVhMmMwMTAxMmY5MzkwNGRhZWNmYzBhZDliZDhhOTYucG5n.png" alt="" style="max-height: 66px;width: 183px;margin: 10px 10px 10px 0"></div>
+				<div style="max-width: 800px;text-align: right;float: right;margin: 30px 0;" class="list">
+					<a href="#/" class="active"><span>首页</span></a>
+			        <a href="#/list1"><span>关于我们</span></a>
+			        <a href="#/list2"><span>产品展示</span></a>
+			        <a href="#/list3"><span>新闻动态</span></a>
+			        <a href="#/list4"><span>联系我们</span></a>
+				</div>
+			</div>
+		</div>
+		<div style="min-height: 855px;margin: 0 auto;">
+			<router-view></router-view>
+		</div>
+		<div style="border: 1px #f4f4f4 solid;height: 50px;margin: 0 100px 20px">
+			<div style="width: 245px;text-align: center;margin-top: 8px;float: left;"><img src="https://ccdn.goodq.top/caches/c0b2c37cae1f3b474c3b0522b670a440/aHR0cHM6Ly81NGQ0YTNiMjEwY2FlLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTcvMDIvNDVhMmMwMTAxMmY5MzkwNGRhZWNmYzBhZDliZDhhOTYtMTAxeDM2LnBuZw_p_p100_p_3D_p_p100_p_3D.png" alt=""></div>
+			<div style="text-align: center;background: #f5f5f5;width: 815px;height: 50px;line-height: 50px;float: left;color: #808080"><span style="font-size: 12px;">版权所有 ©2014   地址：上海市松江区佘山林荫大道18号    京ICP备********号 </span></div>
+		</div>
+	</div>
+
+	<template id="list">
+		<div>
+			<div class="swiper-container">
+                <div class="swiper-wrapper">
+                	<div class="swiper-slide"><img src="https://54d4a3b210cae.t73.qifeiye.com/qfy-content/uploads/2014/06/c8d6f54e0799fe165eb5d21936cdcf66.jpg"></div>
+                    <div class="swiper-slide"><img src="https://54d4a3b210cae.t73.qifeiye.com/qfy-content/uploads/2014/06/8f252a9db700ba559288dc9bbb4d655b.jpg"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+			<div style="margin-bottom: 25px;padding: 0 100px;">
+				<div style="width: 100%;margin: 0 auto;height: 210px;">
+					<div style="margin-top: 10px;padding: 20px 20px 0;">
+						<div style="padding: 0 9px;margin-top: 5px;width: 236px;height: 176px;float: left;">
+							<img src="https://ccdn.goodq.top/caches/c0b2c37cae1f3b474c3b0522b670a440/aHR0cHM6Ly81NGQ0YTNiMjEwY2FlLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMDIvZmFkNTY4YWFlNDQ0ODJlMTQ2MjNjNjJiY2IyZWJkMjIucG5n.png" alt="" style="height: 141px">
+							<div style="line-height: 1.5em;margin-top: 10px;text-align: center">
+								<strong><a href="#/list2"><span style="font-size: 14px;color:#A9A9A9;">关于我们 / </span><span style="color: rgb(61, 208, 221);font-size: 12px;">ABOUT</span></a></strong>
+							</div>
+						</div>
+						<div style="padding: 0 9px;margin-top: 5px;width: 236px;height: 176px;float: left;">
+							<img src="https://ccdn.goodq.top/caches/c0b2c37cae1f3b474c3b0522b670a440/aHR0cHM6Ly81NGQ0YTNiMjEwY2FlLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMDIvZmI5NDZiM2NhNmVjNmM2MjVjMjE3OTAxOGRiM2EwMzEucG5n.png" alt="" style="height: 141px">
+							<div style="line-height: 1.5em;margin-top: 10px;text-align: center">
+								<strong><a href=""><span style="font-size: 14px;color:#A9A9A9;">新闻动态 / </span><span style="color: rgb(61, 208, 221);font-size: 12px;">NEWS</span></a></strong>
+							</div>
+						</div>
+						<div style="padding: 0 9px;margin-top: 5px;width: 236px;height: 176px;float: left;">
+							<img src="https://ccdn.goodq.top/caches/c0b2c37cae1f3b474c3b0522b670a440/aHR0cHM6Ly81NGQ0YTNiMjEwY2FlLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTAvNDgzODFjNTkzMjQyYmVhNzE0MWI4YTA4ZGUyOGVmN2YuanBn.jpg" alt="" style="height: 141px">
+							<div style="line-height: 1.5em;margin-top: 10px;text-align: center">
+								<strong><a href=""><span style="font-size: 14px;color:#A9A9A9;">联系我们 / </span><span style="color: rgb(61, 208, 221);font-size: 12px;">CONTACT</span></a></strong>
+							</div>
+						</div>
+						<div style="padding: 0 9px;margin-top: 5px;width: 236px;height: 176px;float: left;">
+							<img src="https://ccdn.goodq.top/caches/c0b2c37cae1f3b474c3b0522b670a440/aHR0cHM6Ly81NGQ0YTNiMjEwY2FlLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMDIvZWQ4MDViNDI1MWM5ZDc3MTU3ZWY4ODcyODc4ZmFiNzIucG5n.png" alt="" style="height: 141px">
+							<div style="line-height: 1.5em;margin-top: 10px;text-align: center">
+								<strong><a href=""><span style="font-size: 14px;color:#A9A9A9;">产品展示 / </span><span style="color: rgb(61, 208, 221);font-size: 12px;">PRODUCTS</span></a></strong>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="margin-top: 20px;height: 200px;margin-bottom: 20px;">
+					<div style="border-width: 1px 0px 0px;border-style: solid;border-color: rgb(221, 221, 221);padding: 0px;width: 100%;height: 1px;float: none;margin: 2px 2px 10px 0px;top: 8px;"></div>
+					<div style="height: 238px">
+						<div style="padding: 20px 20px 0;">
+							<div style="width:480px;float: left;padding-left: 20px">
+								<table class="nomarl" height="144" width="100%" cellspacing="1" cellpadding="1" border="0">
+									<tbody>
+										<tr>
+											<td rowspan="2" width="30%"><a href="#"><img src="https://ccdn.goodq.top/caches/c0b2c37cae1f3b474c3b0522b670a440/aHR0cDovLzU0ZDRhM2IyMTBjYWUudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxNi8xMS80YmY2MDIwMGY1ZmZhOWUwM2JiYzFiZWFiMjgxY2FhZi5qcGc_p_p100_p_2FYXR0YWNobWVudF9pZD02NTE3.jpg" alt="" style="width: 136px;height: 122px"></a></td>
+											<td rowspan="2" width="5%">&nbsp;</td>
+											<td width="65%"><strong><span style="letter-spacing:1px;color: rgb(105, 105, 105);font-size: 14px">产品名称#1</span></strong></td>
+										</tr>
+										<tr><td><span style="color:#808080;font-size: 12px;letter-spacing: 1px;">其主要门类包括：化学原料药及制剂、中药材、中药饮片、中成药、抗生素、生物制品、生化药品、放射性药品、医疗器械、卫生材料、制药机械、药用包装材料及医药商业。</span></td></tr>
+									</tbody>
+								</table>
+								<div style="padding-bottom: 10px;border-width: 1px 0px 0px;border-style: solid;padding-top: 10px;border-color: rgb(221, 221, 221);width: 100%;height: 1px;float: none;margin: 2px 2px 10px 0px;top: 8px;"></div>
+							</div>
+							<div style="width:480px;float: left;padding-left: 20px">
+								<table class="nomarl" height="144" width="100%" cellspacing="1" cellpadding="1" border="0">
+									<tbody>
+										<tr>
+											<td rowspan="2" width="30%"><a href="#"><img src="https://ccdn.goodq.top/caches/c0b2c37cae1f3b474c3b0522b670a440/aHR0cDovLzU0ZDRhM2IyMTBjYWUudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxNi8xMS9lN2I3MDczNWQ1NWU1ZGYxNGUxODI5ODEwMzMwYjYxNS5qcGc_p_p100_p_2FYXR0YWNobWVudF9pZD02NTE4.jpg" alt="" style="width: 136px;height: 122px"></a></td>
+											<td rowspan="2" width="5%">&nbsp;</td>
+											<td width="65%"><strong><span style="letter-spacing:1px;color: rgb(105, 105, 105);font-size: 14px">产品名称#2</span></strong></td>
+										</tr>
+										<tr><td><span style="color:#808080;font-size: 12px;letter-spacing: 1px;">其主要门类包括：化学原料药及制剂、中药材、中药饮片、中成药、抗生素、生物制品、生化药品、放射性药品、医疗器械、卫生材料、制药机械、药用包装材料及医药商业。</span></td></tr>
+									</tbody>
+								</table>
+								<div style="padding-bottom: 10px;border-width: 1px 0px 0px;border-style: solid;padding-top: 10px;border-color: rgb(221, 221, 221);width: 100%;height: 1px;float: none;margin: 2px 2px 10px 0px;top: 8px;"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</template>
+	<template id="list1">
+		<div>
+			<div style="min-height: 1120px;">
+				<div style="width: 100%;height: 271px"><img src="https://ccdn.goodq.top/caches/c0b2c37cae1f3b474c3b0522b670a440/aHR0cDovLzU0ZDRhM2IyMTBjYWUudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxNi8xMS9kYjQ5NTE0ODdlN2RhNmM0YWNiNjc5ODI2NDQ5YjlkZC5qcGc_p_p100_p_3D.jpg" alt="" style="width: 100%;height: 271px"></div>
+				<div style="height: 38px;border-bottom: 1px rgba(219,219,219,1) solid;margin: 0 100px;text-align: right;color:#727272;font-size:14px;line-height: 38px">
+					<span>您目前的位置：</span><a href="#/">首页</a><span> > </span><span>关于我们</span>
+				</div>
+				<div style="min-height: 740px;margin: 0 100px;padding: 20px 20px 0;box-sizing: border-box">
+					<div style="float: left;padding: 0 30px 0 5px;">
+						<div style="padding: 0 10px 10px">
+							<p style="font-family: 微软雅黑;font-size: 26px;font-weight: normal;font-style: normal;color: #333333;display: block;padding: 0 5px 0px 0;vertical-align: bottom;">关于我们</p>
+							<p style="font-family: century gothic;font-size: 14px;font-weight: normal;font-style: normal;color: #bababa;display: block;padding: 2px;vertical-align: bottom;">ABOUT US</p>
+							<span style="overflow: hidden;border: 2.5px #3191cc solid;width: 155px;margin-top: 5px;display: block"></span>
+						</div>
+						<ul class="ul">
+							<li class="active"><a href="#"><i class="el-icon-caret-right"></i><span>公司概况</span></a></li>
+							<li><a href="#"><i class="el-icon-caret-right"></i><span>公司荣誉</span></a></li>
+						</ul>
+					</div>
+					<div style="float: left;line-height: 1.5em;max-width: 777px;font-size: 14px;color: #333">
+						<div>公司顺应医药流通发展趋势，投资2.3亿元建设省内具有领先水平的现代医药物流中心，精心打造信息化管理、专业化服务、规模化运作的现代医药流通企业，立足波，辐射，承担起浙江省的药品配送，成为物流平台，保障人民群众的用药需求。作为久负盛名的医药商业企业，股份将站在一个全新的历史起点、跨越新高度，以创新求发展，为打造“百年”企业，开创新的历史篇章。</div>
+						<div style="height: 24px"></div>
+						<div>
+							<div>公司顺应医药流通发展趋势，投资2.3亿元建设省内具有领先水平的现代医药物流中心，精心打造信息化管理、专业化服务、规模化运作的现代医药流通企业，立足波，辐射，承担起浙江省的药品配送，成为物流平台，保障人民群众的用药需求。作为久负盛名的医药商业企业，股份将站在一个全新的历史起点、跨越新高度，以创新求发展，为打造“百年”企业，开创新的历史篇</div>
+							<div style="height: 24px"></div>
+							<div>公司顺应医药流通发展趋势，投资2.3亿元建设省内具有领先水平的现代医药物流中心，精心打造信息化管理、专业化服务、规模化运作的现代医药流通企业，立足波，辐射，承担起浙江省的药品配送，成为物流平台，保障人民群众的用药需求。作为久负盛名的医药商业企业，股份将站在一个全新的历史起点、跨越新高度，以创新求发展，为打造“百年”企业，开创新的历史篇</div>
+							<div style="height: 24px"></div>
+						</div>
+					</div>
+					<div style="float: right;margin-right: 50px;height: 351px"><img src="https://ccdn.goodq.top/caches/c0b2c37cae1f3b474c3b0522b670a440/aHR0cDovLzU0ZDRhM2IyMTBjYWUudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxNC8wNi9wMTYuanBnP2F0dGFjaG1lbnRfaWQ9NTkxNw_p_p100_p_3D_p_p100_p_3D.jpg" alt="" style="width: 753px;height: 345px">
+					<p style="text-align: center;color:#A9A9A9;font-size: 13px;line-height: 25px">最新进口治疗仪器</p></div>
+				</div>
+			</div>
+		</div>
+	</template>
+	<template id="list2">
+		<div>
+			<div style="min-height: 855px;">
+				<div style="width: 100%;height: 271px"><img src="https://ccdn.goodq.top/caches/c0b2c37cae1f3b474c3b0522b670a440/aHR0cDovLzU0ZDRhM2IyMTBjYWUudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxNi8xMS9kYjQ5NTE0ODdlN2RhNmM0YWNiNjc5ODI2NDQ5YjlkZC5qcGc_p_p100_p_3D.jpg" alt="" style="width: 100%;height: 271px"></div>
+				<div style="height: 38px;border-bottom: 1px rgba(219,219,219,1) solid;margin: 0 100px;text-align: right;color:#727272;font-size:14px;line-height: 38px">
+					<span>您目前的位置：</span><a href="#/">首页</a><span> > </span><span>产品展示</span>
+				</div>
+				<div style="min-height: 545px;margin: 0 100px;padding: 20px 20px 0;box-sizing: border-box">
+					<div style="float: left;padding: 0 30px 0 5px;">
+						<div style="padding: 0 10px 10px">
+							<p style="font-family: 微软雅黑;font-size: 26px;font-weight: normal;font-style: normal;color: #333333;display: block;padding: 0 5px 0px 0;vertical-align: bottom;">产品展示</p>
+							<p style="font-family: century gothic;font-size: 14px;font-weight: normal;font-style: normal;color: #bababa;display: block;padding: 2px;vertical-align: bottom;">ABOUT US</p>
+							<span style="overflow: hidden;border: 2.5px #3191cc solid;width: 155px;margin-top: 5px;display: block"></span>
+						</div>
+						<ul class="ul">
+							<li class="active"><a href="#"><i class="el-icon-caret-right"></i><span>医院常用医疗器械</span></a></li>
+							<li><a href="#"><i class="el-icon-caret-right"></i><span>家庭保健器材</span></a></li>
+							<li><a href="#"><i class="el-icon-caret-right"></i><span>家庭护理设备</span></a></li>
+						</ul>
+					</div>
+					<div style="float: left;max-width: 777px;">
+						<ul style="min-height: 60px">
+							<li style="width: 259px;margin-bottom: 15px;padding-bottom: 5px;float: left">
+								<div style="padding-bottom: 10px;width: 100%">
+									<img src="https://ccdn.goodq.top/caches/c0b2c37cae1f3b474c3b0522b670a440/aHR0cDovLzU0ZDRhM2IyMTBjYWUudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxNi8xMS80YmY2MDIwMGY1ZmZhOWUwM2JiYzFiZWFiMjgxY2FhZi00MDB4MzAwLmpwZw_p_p100_p_3D_p_p100_p_3D.jpg" alt="" style="width: 241px;height: 181px">
+								</div>
+								<div style="font-weight: normal;color: #373A41;line-height: 15px;vertical-align: top;text-align: center;line-height: 21px;width: 241px"><a href="#">产品展示1</a></div>
+							</li>
+							<li style="width: 259px;margin-bottom: 15px;padding-bottom: 5px;float: left">
+								<div style="padding-bottom: 10px;width: 100%">
+									<img src="https://ccdn.goodq.top/caches/c0b2c37cae1f3b474c3b0522b670a440/aHR0cDovLzU0ZDRhM2IyMTBjYWUudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxNi8xMS9lN2I3MDczNWQ1NWU1ZGYxNGUxODI5ODEwMzMwYjYxNS00MDB4MzAwLmpwZw_p_p100_p_3D_p_p100_p_3D.jpg" alt="" style="width: 241px;height: 181px">
+								</div>
+								<div style="font-weight: normal;color: #373A41;line-height: 15px;vertical-align: top;text-align: center;line-height: 21px;width: 241px"><a href="#">产品展示2</a></div>
+							</li>
+							<li style="width: 259px;margin-bottom: 15px;padding-bottom: 5px;float: left">
+								<div style="padding-bottom: 10px;width: 100%">
+									<img src="https://ccdn.goodq.top/caches/c0b2c37cae1f3b474c3b0522b670a440/aHR0cDovLzU0ZDRhM2IyMTBjYWUudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxNi8xMS8zOTdlYzc2OTljMWExZDBmNjE4NzNjNmUxMDgwZTU5Ny00MDB4MzAwLmpwZw_p_p100_p_3D_p_p100_p_3D.jpg" alt="" style="width: 241px;height: 181px">
+								</div>
+								<div style="font-weight: normal;color: #373A41;line-height: 15px;vertical-align: top;text-align: center;line-height: 21px;width: 241px"><a href="#">产品展示3</a></div>
+							</li>
+							<li style="width: 259px;margin-bottom: 5px;padding-bottom: 5px;float: left">
+								<div style="padding-bottom: 10px;width: 100%">
+									<img src="https://ccdn.goodq.top/caches/c0b2c37cae1f3b474c3b0522b670a440/aHR0cDovLzU0ZDRhM2IyMTBjYWUudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxNi8xMS9jYjE1Zjk2YmRiNjZkMjU0NTlkZWMwNGQyNTJhNTBlYy00MDB4MzAwLmpwZw_p_p100_p_3D_p_p100_p_3D.jpg" alt="" style="width: 241px;height: 181px">
+								</div>
+								<div style="font-weight: normal;color: #373A41;line-height: 15px;vertical-align: top;text-align: center;line-height: 21px;width: 241px"><a href="#">产品展示4</a></div>
+							</li>
+							<li style="width: 259px;margin-bottom: 5px;padding-bottom: 5px;float: left">
+								<div style="padding-bottom: 10px;width: 100%">
+									<img src="https://ccdn.goodq.top/caches/c0b2c37cae1f3b474c3b0522b670a440/aHR0cDovLzU0ZDRhM2IyMTBjYWUudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxNi8xMS8xN2M0ZTNkYWMxMWM4M2ZjZmM3YTBiZmEzNjNjZWFkNy00MDB4MzAwLmpwZw_p_p100_p_3D_p_p100_p_3D.jpg" alt="" style="width: 241px;height: 181px">
+								</div>
+								<div style="font-weight: normal;color: #373A41;line-height: 15px;vertical-align: top;text-align: center;line-height: 21px;width: 241px"><a href="#">产品展示5</a></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</template>
+	<template id="list3">
+		<div>
+			<div style="min-height: 1122px;">
+				<div style="width: 100%;height: 271px"><img src="https://ccdn.goodq.top/caches/c0b2c37cae1f3b474c3b0522b670a440/aHR0cDovLzU0ZDRhM2IyMTBjYWUudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxNi8xMS9kYjQ5NTE0ODdlN2RhNmM0YWNiNjc5ODI2NDQ5YjlkZC5qcGc_p_p100_p_3D.jpg" alt="" style="width: 100%;height: 271px"></div>
+				<div style="height: 38px;border-bottom: 1px rgba(219,219,219,1) solid;margin: 0 100px;text-align: right;color:#727272;font-size:14px;line-height: 38px">
+					<span>您目前的位置：</span><a href="#/">首页</a><span> > </span><span>新闻动态</span>
+				</div>
+				<div style="min-height: 545px;margin: 0 100px;padding: 20px 20px 0;box-sizing: border-box">
+					<div style="float: left;padding: 0 30px 0 5px;">
+						<div style="padding: 0 10px 10px">
+							<p style="font-family: 微软雅黑;font-size: 26px;font-weight: normal;font-style: normal;color: #333333;display: block;padding: 0 5px 0px 0;vertical-align: bottom;">新闻动态</p>
+							<p style="font-family: century gothic;font-size: 14px;font-weight: normal;font-style: normal;color: #bababa;display: block;padding: 2px;vertical-align: bottom;">ABOUT US</p>
+							<span style="overflow: hidden;border: 2.5px #3191cc solid;width: 155px;margin-top: 5px;display: block"></span>
+						</div>
+						<ul class="ul">
+							<li class="active"><a href="#"><i class="el-icon-caret-right"></i><span>公司新闻</span></a></li>
+							<li><a href="#"><i class="el-icon-caret-right"></i><span>行业动态</span></a></li>
+						</ul>
+					</div>
+					<div style="float: left;max-width: 777px;">
+						<ul>
+							<li style="margin-bottom: 15px;padding-bottom: 15px;border-bottom: 1px solid #e5e5e5;height: 114px">
+								<div style="width: 140px;padding-right: 15px;vertical-align: top;float: left;"><a href="#"><img src="https://ccdn.goodq.top/caches/c0b2c37cae1f3b474c3b0522b670a440/aHR0cDovLzU0ZDRhM2IyMTBjYWUudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxNS8wMS8wMDA4ODY4XzM1MC0xNDB4MTEwLmpwZWc_p_p100_p_3D.png" alt="" style="width: 140px;height: 110px;"></a></div>
+								<div style="vertical-align: top;font-size: 14px;color: #8d9095;padding-right: 5px;text-align: left;float: left;width: 600px">
+									<div style="margin-bottom: 10px;color: #1e1e1e;font-size: 18px;line-height: 18px;"><a href="#">“50+”医疗棋局</a></div>
+									<div style="color: #999;font-size: 12px;line-height: 12px;margin-bottom: 5px">
+										<span>发布日期：<span>2015-01-22</span></span>
+										<span> 分类：<a href="#" style="color: #999;"><span>行业动态</span></a></span>
+									</div>
+									<div style="color: #939393;font-size: 13px;padding-top: 10px;">“医疗服务价格是很重要的价格杠杆。”市卫计委副主任、新闻发言人钟东波表示，北京的医疗服务价格自1999年之后，一直没有调整，积累了较大的矛盾和问题。</div>
+								</div>
+							</li>
+							<li style="margin-bottom: 15px;padding-bottom: 15px;border-bottom: 1px solid #e5e5e5;height: 114px">
+								<div style="width: 140px;padding-right: 15px;vertical-align: top;float: left;"><a href="#"><img src="https://ccdn.goodq.top/caches/c0b2c37cae1f3b474c3b0522b670a440/aHR0cDovLzU0ZDRhM2IyMTBjYWUudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxNS8wMS8wMDA4ODY4XzM1MC0xNDB4MTEwLmpwZWc_p_p100_p_3D.png" alt="" style="width: 140px;height: 110px;"></a></div>
+								<div style="vertical-align: top;font-size: 14px;color: #8d9095;padding-right: 5px;text-align: left;float: left;width: 600px">
+									<div style="margin-bottom: 10px;color: #1e1e1e;font-size: 18px;line-height: 18px;"><a href="#">“50+”医疗棋局</a></div>
+									<div style="color: #999;font-size: 12px;line-height: 12px;margin-bottom: 5px">
+										<span>发布日期：<span>2015-01-22</span></span>
+										<span> 分类：<a href="#" style="color: #999;"><span>行业动态</span></a></span>
+									</div>
+									<div style="color: #939393;font-size: 13px;padding-top: 10px;">“医疗服务价格是很重要的价格杠杆。”市卫计委副主任、新闻发言人钟东波表示，北京的医疗服务价格自1999年之后，一直没有调整，积累了较大的矛盾和问题。</div>
+								</div>
+							</li>
+							<li style="margin-bottom: 15px;padding-bottom: 15px;border-bottom: 1px solid #e5e5e5;height: 114px">
+								<div style="width: 140px;padding-right: 15px;vertical-align: top;float: left;"><a href="#"><img src="https://ccdn.goodq.top/caches/c0b2c37cae1f3b474c3b0522b670a440/aHR0cDovLzU0ZDRhM2IyMTBjYWUudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxNS8wMS8wMDA4ODY4XzM1MC0xNDB4MTEwLmpwZWc_p_p100_p_3D.png" alt="" style="width: 140px;height: 110px;"></a></div>
+								<div style="vertical-align: top;font-size: 14px;color: #8d9095;padding-right: 5px;text-align: left;float: left;width: 600px">
+									<div style="margin-bottom: 10px;color: #1e1e1e;font-size: 18px;line-height: 18px;"><a href="#">“50+”医疗棋局</a></div>
+									<div style="color: #999;font-size: 12px;line-height: 12px;margin-bottom: 5px">
+										<span>发布日期：<span>2015-01-22</span></span>
+										<span> 分类：<a href="#" style="color: #999;"><span>行业动态</span></a></span>
+									</div>
+									<div style="color: #939393;font-size: 13px;padding-top: 10px;">“医疗服务价格是很重要的价格杠杆。”市卫计委副主任、新闻发言人钟东波表示，北京的医疗服务价格自1999年之后，一直没有调整，积累了较大的矛盾和问题。</div>
+								</div>
+							</li>
+							<li style="margin-bottom: 15px;padding-bottom: 15px;border-bottom: 1px solid #e5e5e5;height: 114px">
+								<div style="width: 140px;padding-right: 15px;vertical-align: top;float: left;"><a href="#"><img src="https://ccdn.goodq.top/caches/c0b2c37cae1f3b474c3b0522b670a440/aHR0cDovLzU0ZDRhM2IyMTBjYWUudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxNS8wMS8wMDA4ODY4XzM1MC0xNDB4MTEwLmpwZWc_p_p100_p_3D.png" alt="" style="width: 140px;height: 110px;"></a></div>
+								<div style="vertical-align: top;font-size: 14px;color: #8d9095;padding-right: 5px;text-align: left;float: left;width: 600px">
+									<div style="margin-bottom: 10px;color: #1e1e1e;font-size: 18px;line-height: 18px;"><a href="#">“50+”医疗棋局</a></div>
+									<div style="color: #999;font-size: 12px;line-height: 12px;margin-bottom: 5px">
+										<span>发布日期：<span>2015-01-22</span></span>
+										<span> 分类：<a href="#" style="color: #999;"><span>行业动态</span></a></span>
+									</div>
+									<div style="color: #939393;font-size: 13px;padding-top: 10px;">“医疗服务价格是很重要的价格杠杆。”市卫计委副主任、新闻发言人钟东波表示，北京的医疗服务价格自1999年之后，一直没有调整，积累了较大的矛盾和问题。</div>
+								</div>
+							</li>
+							<li style="margin-bottom: 15px;padding-bottom: 15px;height: 114px">
+								<div style="width: 140px;padding-right: 15px;vertical-align: top;float: left;"><a href="#"><img src="https://ccdn.goodq.top/caches/c0b2c37cae1f3b474c3b0522b670a440/aHR0cDovLzU0ZDRhM2IyMTBjYWUudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxNS8wMS8wMDA4ODY4XzM1MC0xNDB4MTEwLmpwZWc_p_p100_p_3D.png" alt="" style="width: 140px;height: 110px;"></a></div>
+								<div style="vertical-align: top;font-size: 14px;color: #8d9095;padding-right: 5px;text-align: left;float: left;width: 600px">
+									<div style="margin-bottom: 10px;color: #1e1e1e;font-size: 18px;line-height: 18px;"><a href="#">“50+”医疗棋局</a></div>
+									<div style="color: #999;font-size: 12px;line-height: 12px;margin-bottom: 5px">
+										<span>发布日期：<span>2015-01-22</span></span>
+										<span> 分类：<a href="#" style="color: #999;"><span>行业动态</span></a></span>
+									</div>
+									<div style="color: #939393;font-size: 13px;padding-top: 10px;">“医疗服务价格是很重要的价格杠杆。”市卫计委副主任、新闻发言人钟东波表示，北京的医疗服务价格自1999年之后，一直没有调整，积累了较大的矛盾和问题。</div>
+								</div>
+							</li>
+						</ul>
+						<div style="margin-bottom: 5px;">
+							<a href="#" style="border: 1px solid #595959;color: #fff;font-size: 14px;line-height: 14px;padding: 2px 6px;    background-color: #595959;">1</a>
+							<a href="#" style="border: 1px solid #595959;color: #595959;font-size: 14px;line-height: 14px;padding: 2px 6px;">2</a>
+							<a href="#" style="border: 1px solid #595959;color: #595959;font-size: 14px;line-height: 14px;padding: 2px 6px;">下一页</a>
+							<a href="#" style="border: 1px solid #595959;color: #595959;font-size: 14px;line-height: 14px;padding: 2px 6px;">尾页</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</template>
+	<template id="list4">
+		<div>
+			<div style="min-height: 550px;">
+				<div style="width: 100%;height: 271px"><img src="https://ccdn.goodq.top/caches/c0b2c37cae1f3b474c3b0522b670a440/aHR0cDovLzU0ZDRhM2IyMTBjYWUudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxNi8xMS9kYjQ5NTE0ODdlN2RhNmM0YWNiNjc5ODI2NDQ5YjlkZC5qcGc_p_p100_p_3D.jpg" alt="" style="width: 100%;height: 271px"></div>
+				<div style="height: 38px;border-bottom: 1px rgba(219,219,219,1) solid;margin: 0 100px;text-align: right;color:#727272;font-size:14px;line-height: 38px">
+					<span>您目前的位置：</span><a href="#/">首页</a><span> > </span><span>联系我们</span>
+				</div>
+				<div style="min-height: 510px;margin: 0 100px;padding: 20px 20px 0;box-sizing: border-box">
+					<div style="float: left;padding: 0 30px 0 5px;">
+						<div style="padding: 0 10px 10px">
+							<p style="font-family: 微软雅黑;font-size: 26px;font-weight: normal;font-style: normal;color: #333333;display: block;padding: 0 5px 0px 0;vertical-align: bottom;">联系我们</p>
+							<p style="font-family: century gothic;font-size: 14px;font-weight: normal;font-style: normal;color: #bababa;display: block;padding: 2px;vertical-align: bottom;">ABOUT US</p>
+							<span style="overflow: hidden;border: 2.5px #3191cc solid;width: 155px;margin-top: 5px;display: block"></span>
+						</div>
+						<ul class="ul">
+							<li class="active"><a href="#"><i class="el-icon-caret-right"></i><span>联系我们</span></a></li>
+							<li><a href="#"><i class="el-icon-caret-right"></i><span>加入我们</span></a></li>
+						</ul>
+					</div>
+					<div style="float: left;max-width: 777px;">
+						<div style="margin-top: 10px;line-height: 1.5em;">
+							<div style="color: #000"><strong>医疗器械有限公司</strong></div>
+							<div><span style="font-size: 14px;color: #808080">地址：临江市工业园区中心大道西<br>电话：4001-220-125<br>邮箱：youjia@youjia.com</span></div>
+						</div>
+						 <div id="map" style="width: 756px;height:378px"><iframe src="index2.html" width="100%" height="100%"frameborder="0" scrolling="no"></iframe></div> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</template>
+</body>
+<script type="text/javascript" src="vue.js"></script>
+<script type="text/javascript" src="vue-router.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="swiper.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+</html>
